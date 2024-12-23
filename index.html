@@ -1,0 +1,104 @@
+﻿<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript Prog 3">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Telem">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>תכנות 3 - JavaScript</title>
+
+    <!-- קבצי Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    
+    <!--    קבצי Material Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- קובץ CSS ראשי -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- קבצי Bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+<!-- חלק עליון של האתר -->
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
+        <div class="navDiv d-flex align-items-center">
+            <!-- תפריט למובייל -->
+            <button style="z-index: 100" class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon hidden"></span>
+            </button>
+
+            <!-- לוגו וטקסט -->
+            <div class="d-flex align-items-center">
+                <img src="img/babyLogo-removebg-preview.png" alt="logo" class="navbar-logo me-2">
+                <a class="navbar-brand" href="#">חלומות מתוקים</a>
+            </div>
+
+            <!-- קו מפריד בין התפריט ללוגו -->
+            <div class="border-start border-1 border-dark mx-3 d-none d-lg-block" style="height: 2rem;"></div>
+
+            <!-- תפריט דסקטופ -->
+            <div class="d-none d-lg-flex justify-content-start align-items-center flex-grow-1">
+                <ul class="navbar-nav flex-row gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">עמוד הבית</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">שינה בטוחה</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">אודות</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- תפריט מובייל (offcanvas) -->
+        <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar"
+             aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <div class="brand-container-offcanvas d-flex flex-column align-content-center wrap col-12">
+                    <img class="navbar-logo" src="img/babyLogo-removebg-preview.png" alt="logo" />
+                    <a class="navbar-brand" href="#">חלומות מתוקים</a>
+                </div>
+
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <hr />
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">דף הבית</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">שינה בטוחה</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" aria-expanded="false">
+                            אודות
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- תוכן ראשי -->
+<div class="container p-0" id="mainContentContainer">
+    <!-- כאן נטען התוכן הדינאמי -->
+</div>
+</body>
+
+</html>

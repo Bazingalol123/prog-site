@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+:root {
+    --font-stack: 'Varela Round', sans-serif;
+    --primary-blue: #B5D4D3;
+    --primary-pink: #f9e9e9;
+    --primary-black: #404040;
+    --primary-gray: #808080;
+    --secondary-gray: #eaeae8;
+}
+
+.btn{
+    background-color: var(--primary-gray) !important;
+    color: white !important;
+}
+
+.hover-effect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.hover-effect:hover {
+    position: relative;
+    bottom: 0.25rem;
+}
+
+.btn.disabled {
+    color: white !important;
+    font-weight: bold;
+    background-color: var(--secondary-gray);
+    pointer-events: none; 
+    opacity: 0.65; 
+}
+
+.primary-gray{
+    color: var(--primary-gray);
+}
+body{
+    font-family: 'Varela Round', sans-serif;
+
+    max-width: 100vw;
+}
+
+hr {
+    width: 90%;
+    position: relative;
+    display: flex;
+    transform: translateX(-5%);
+    border-radius: 50%;
+    
+}
+
+
+.btn-close {
+    position: relative;
+    bottom: 1rem;
+    left: 1rem;
+}
+    
+
+.card-img-top{
+  height: 5rem;
+  background-color:black;
+    min-height: 4rem;
+}
+.card-body h3{
+  margin-bottom: 20px;
+  font-size: 14pt;
+  text-align: center;
+}
+
+
+video, img, canvas{
+    max-width: 100%;
+}
+
+img {
+    width: 3rem;
+}
+
+.primary {
+    background-color: #B5D4D3;
+
+}
+
+/*הגדרות CSS של הContainers*/
+#first-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("../img/babyBg.jpeg");
+    text-align: right;
+    background-size: cover; 
+    top: 0;
+    background-position: bottom left; 
+    background-repeat: no-repeat;
+
+    position: relative; 
+    width: 100%;
+    height: 35vh; 
+}
+
+#itemsContainer { 
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-wrap: wrap;
+ gap: 0.5rem;
+ list-style-type: none;
+ 
+ }
+
+ #itemsContainer>ul>li {
+    aspect-ratio: 1/1;
+    width: calc(100% *(1/2) - 30px);
+    background-color: var(--primary-blue);
+    border-radius: 1rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:black;
+    font-size: 1rem;
+    text-align: right;
+ }
+
+
+#header-content{
+  
+    display: flex;
+    flex-direction: column;
+    
+    position: relative;
+    top: 0.6rem;  
+}
+
+.image-background{
+    width:100vw;
+}
+
+
+
+/* הגדרות של תפריט ניווט במובייל */
+
+.navbar {
+  direction: rtl;
+  background-color: #B5D4D3;
+    max-height:5rem;
+}
+
+.navbar-logo {
+    width: 2.5rem;
+    height: auto;
+}
+
+.brand-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 2rem;
+    
+}
+
+.brand-container-offcanvas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+
+}
+.navbar-brand {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.nav-link.active {
+    background-color: var(--primary-blue);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    color: var(--primary-black);
+}
+/* קו מפריד בין הלוגו לפריטים */
+.border-start {
+    height: 2rem;
+}
+.nav-link{
+    font-size: 1.3rem;
+    color: var(--primary-black);
+    font-weight: bold;
+    padding: 0.75rem 0;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem; 
+}
+
+.navDiv{
+    gap:2.3rem;
+}
+
+.navDiv > button {
+    border:none;
+    &:focus {
+        outline: none;
+        --bs-navbar-toggler-focus-width: 0rem;
+    }
+}
+
+
+
+.recommendation-card {
+    transition: all 0.3s ease;
+}
+
+.recommendation-card.expanded {
+    height: auto;
+}
+
+.toggle-btn:not(.collapsed) .bi-arrow-down-circle-fill {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.toggle-btn .bi-arrow-down-circle-fill {
+    transition: transform 0.3s ease;
+    transform: rotate(180deg);
+}
+
+
+.collapse {
+    transition: height 0.3s ease;
+    
+}
+
+.collapsed-arrow {
+    transition: transform 0.3s ease;
+}
+
+#header-content h2 {
+    font-weight: bold;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-top: 1.5rem !important;
+}
+.nav-item {
+    text-align: center;
+}
+.download-btn {
+    display: inline-block; 
+    background-color: #f9e9e9 !important;
+    color: var(--primary-black) !important; 
+   
+    border-radius: 0.5rem;
+    text-align: right;
+    padding: 0.5rem 0.8rem;
+    font-size: 1rem;
+    font-weight: bold; 
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); 
+    margin-top: 1rem;
+    margin-right: 0; 
+    max-width: 38vw;
+}
+#download-feedback {
+    font-size: 1rem;
+    color: green; 
+    text-align: right; 
+    height: 1.5rem; /
+    line-height: 1.5rem; 
+    transition: opacity 0.3s ease; 
+    margin-bottom: 1rem;
+}
+@media only screen and (min-width: 600px) {
+    #header-content{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 1rem;
+    }
+    #itemsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; 
+        padding: 1rem; 
+        max-width: 100%; 
+        box-sizing: border-box;
+    }
+
+    #itemsContainer ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; 
+        padding: 1rem;
+        margin: 0;
+    }
+    #itemsContainer > ul > li {
+        width: calc(100% / 5 - 1rem); 
+        margin: 0.5rem; 
+        max-width: 250px; 
+    }
+    
+    .card-text {
+        font-size: 1rem;
+        min-height: 4rem;
+        max-height: 5rem;
+    }
+    .desktop-nav ul{
+        flex-direction: row;
+        justify-content: right;
+    }
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+   
+    .navDiv {
+        gap:0rem;
+        padding: 2rem;
+    }
+    #first-container {
+        height: 50vh;
+        background-position: center bottom; 
+    }
+
+    #header-content h2 {
+        font-size: 2.5rem;
+        padding-bottom: 1rem;
+        padding-top: 2rem;
+    }
+    #header-content h5 {
+        font-size: 1.5rem;
+
+    }
+    .download-btn {
+    max-width: 60%;
+    text-align: center ;
+    margin-top: 3rem;
+    margin-right: 0;
+}
+    #download-feedback {
+        margin-top: 0.5rem;
+    }
+    
+    .recommendation-card, #info-panel {
+        border-radius:1rem;
+        
+    }
+    
+    #info-panel {
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .recommendation-card.expanded {
+        display: none;
+    }
+    
+    .chosen {
+        box-shadow: 1rem 1rem rgba(0,0,0,0.25);
+    }
+
+    .btn-close {
+        position: relative;
+        cursor: pointer;
+        top:.5rem;
+        left:.5rem;
+    }
+
+;
+}
