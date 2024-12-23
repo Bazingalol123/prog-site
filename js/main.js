@@ -601,28 +601,32 @@ function DesktopReadMore(card) {
 // פונקציה לסגירת פאנל המידע
 function closeInfoPanel() {
     const infoPanel = document.getElementById("info-panel");
-    const arrow = document.querySelector('.info-arrow');
 
-    // איפוס מצב כפתור "קרא עוד" בכרטיסייה הפעילה
+    // בדיקת קיום כרטיסייה פעילה לפני ביצוע פעולות עליה
     if (activeCard) {
         const button = activeCard.querySelector('.toggle-btn');
         const collapseText = button.querySelector('.collapse-text');
         const arrowIcon = button.querySelector('.material-icons-outlined');
+
+        // איפוס מצב הכפתור
         collapseText.textContent = 'קרא עוד';
         arrowIcon.textContent = 'keyboard_arrow_down';
+
+        // הסרת עיצובים מהכרטיסייה
+        activeCard.style.boxShadow = 'none';
+        activeCard.style.scale = '1';
+        activeCard.style.border = 'none';
     }
 
+    // טיפול בפאנל המידע אם הוא קיים
+    if (infoPanel) {
+        infoPanel.classList.remove('d-lg-block');
+        infoPanel.classList.add('d-lg-none');
+        infoPanel.style.border = 'none';
+        infoPanel.style.scale = '1';
+        infoPanel.style.boxShadow = 'none';
+    }
 
-    // הסתרת הפאנל והסרת כל הסגנונות של הכרטיסייה הפעילה
-    infoPanel.classList.remove('d-lg-block');
-    infoPanel.classList.add('d-lg-none');
-    activeCard.style.boxShadow = 'none';
-    activeCard.style.scale = '1';
-    activeCard.style.border = 'none';
-    infoPanel.style.border = 'none';
-    infoPanel.style.scale = '1';
-    infoPanel.style.boxShadow = 'none';
-    // איפוס מעקב אחר הכרטיסייה הפעילה
+    // איפוס המשתנה הגלובלי
     activeCard = null;
 }
-
