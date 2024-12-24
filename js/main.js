@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         const toggleSpan = document.createElement("span");
         toggleSpan.setAttribute("class", "collapse-text");
-        toggleSpan.innerText = "קרא עוד";
+        toggleSpan.innerText = "קראו עוד";
 
         const toggleIcon = document.createElement("span");
         toggleIcon.setAttribute("class", "material-icons-outlined");
@@ -328,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-        // הוספת מאזיני אירועים לכפתורי "קרא עוד"
+        // הוספת מאזיני אירועים לכפתורי "קראו עוד"
     const toggleBtns = document.querySelectorAll('.toggle-btn');
 
     toggleBtns.forEach(btn => {
@@ -349,12 +349,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 
                 card.classList.toggle('expanded');
 
-                // שינוי בין 'קרא עוד' ל-'קרא פחות' על בסיס המצב
+                // שינוי בין 'קראו עוד' ל-'קראו פחות' על בסיס המצב
                 if (this.getAttribute('aria-expanded') === 'false') {
-                    collapseText.textContent = 'קרא עוד';
+                    collapseText.textContent = 'קראו עוד';
                     arrowIcon.textContent = 'keyboard_arrow_down';
                 } else {
-                    collapseText.textContent = 'קרא פחות';
+                    collapseText.textContent = 'קראו פחות';
                     arrowIcon.textContent = 'keyboard_arrow_up';
                 }
 
@@ -513,13 +513,13 @@ function DesktopReadMore(card) {
         activeCard.style.boxShadow = 'none';
         activeCard.style.border = 'none';
         activeCard.style.scale = '1';
-        prevCollapseText.textContent = 'קרא עוד';
+        prevCollapseText.textContent = 'קראו עוד';
         prevArrowIcon.textContent = 'keyboard_arrow_down';
     }
 
     // עדכון סטטוס כרטיסייה שנלחצה
     activeCard = card;
-    currentCollapseText.textContent = 'קרא פחות';
+    currentCollapseText.textContent = 'קראו פחות';
     currentArrowIcon.textContent = 'keyboard_arrow_up';
 
     // חישוב מיקומי הכרטיסיות על המסך
@@ -609,7 +609,7 @@ function closeInfoPanel() {
         const arrowIcon = button.querySelector('.material-icons-outlined');
 
         // איפוס מצב הכפתור
-        collapseText.textContent = 'קרא עוד';
+        collapseText.textContent = 'קראו עוד';
         arrowIcon.textContent = 'keyboard_arrow_down';
 
         // הסרת עיצובים מהכרטיסייה
